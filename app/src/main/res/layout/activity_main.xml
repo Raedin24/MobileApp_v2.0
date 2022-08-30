@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-
-    <!--The mini navigation bar-->
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="@dimen/medium">
 
         <ImageView
@@ -20,261 +17,41 @@
             android:layout_alignParentLeft="true"
             android:background="@drawable/grey_circular_border"
             android:padding="@dimen/small"
-            android:src="@drawable/more" />
+            android:src="@drawable/shopping_cart" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_width="157dp"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="117dp"
+            android:layout_marginEnd="121dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="37dp"
                 android:text="VIGE RENTALS"
-                android:textColor="#060606"
+                android:textColor="@color/textColor"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Products "
-                android:textSize="15sp" />
-
+                android:text="Products"
+                android:textColor="@color/textColor"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/cartButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/grey_circular_border"
             android:padding="@dimen/small"
-            android:src="@drawable/cart" />
-
-        <TextView
-            android:id="@+id/cartCount"
-            style="@style/TextAppearance.MaterialComponents.Caption"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_gravity="top|end"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="-4dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="26dp"
-            android:background="@drawable/badge_shape"
-            android:focusable="true"
-            android:gravity="center"
-            android:text="5"
-            android:textColor="@color/white" />
-
+            android:src="@drawable/shopping_cart" />
 
     </RelativeLayout>
-    <!--Body-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="326dp"
-        android:src="@drawable/table"
-        android:scaleType="centerCrop" />
-
-
-        //other products section
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/medium">
-
-            //item name(example table)
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/small">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TABLE"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:text="$5"
-                android:textColor="#010101"
-                android:textSize="18sp" />
-
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/voilet_circular_border"
-            android:orientation="vertical">
-
-            //suggested for you heading section
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/medium">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Suggested for you"
-                    android:layout_alignParentLeft="true"
-                    android:textSize="16sp"
-                    android:textColor="#ffffff"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="View all"
-                    android:layout_alignParentEnd="true"
-                    android:textSize="16sp"
-                    android:textColor="#ffffff"/>
-
-            </RelativeLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    //first element in suggested for you
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="@dimen/medium"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/white_circular_border"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:src="@drawable/chair" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Foldable chair"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$3"
-                                android:textColor="#363636"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    //second element in suggested for you
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="@dimen/medium"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/white_circular_border"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:src="@drawable/canopy" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Canopy"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$10"
-                                android:textColor="#363636"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    //third element in suggested for you
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginBottom="@dimen/medium"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/white_circular_border"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:src="@drawable/mattress" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mattress"
-                            android:textColor="#000000"
-                            android:textSize="16sp" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$10"
-                                android:textColor="#363636"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
-        </LinearLayout>
-</LinearLayout>
 </LinearLayout>
