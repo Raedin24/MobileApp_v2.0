@@ -77,16 +77,16 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:text="Description"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                />
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quam eros, rutrum quis elementum nec, faucibus sit amet neque. Proin quis aliquet velit. Aenean aliquet sed sapien egestas ullamcorper. In hac habitasse platea dictumst. Maecenas hendrerit, tortor vel eleifend vestibulum, mi dolor consequat massa, sit amet commodo sapien eros vitae ex."
+                android:text="@{shopViewModel.product.description}"
+                android:textStyle="italic"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 />
 

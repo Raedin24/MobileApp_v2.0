@@ -26,7 +26,7 @@ import java.util.List;
 
 public class ShopFragment extends Fragment implements ShopListAdapter.ShopInterface {
 
-    private static final String TAG = "ShopFragment";
+//    private static final String TAG = "ShopFragment";
     FragmentShopBinding fragmentShopBinding;
     private ShopListAdapter shopListAdapter;
     private ShopViewModel shopViewModel;
@@ -69,6 +69,7 @@ public class ShopFragment extends Fragment implements ShopListAdapter.ShopInterf
     public void addItem(Product product) {
         boolean isAdded = shopViewModel.addItemToCart(product);
         if (isAdded) {
+            //Shows a snackbar when an item is added to the cart
             Snackbar.make(requireView(), product.getName() + " added to cart.", Snackbar.LENGTH_LONG)
                     .setAction("Checkout", new View.OnClickListener() {
                         @Override
@@ -78,12 +79,14 @@ public class ShopFragment extends Fragment implements ShopListAdapter.ShopInterf
                     })
                     .show();
         } else {
+            //Shows a snackbar when the maximum no. of items is already in the cart
             Snackbar.make(requireView(), "Already have the max quantity in cart.", Snackbar.LENGTH_LONG)
                     .show();
         }
     }
 
     @Override
+    //Navigates to the product details fragment when an item is clicked
     public void onItemClick(Product product) {
         shopViewModel.setProduct(product);
         navController.navigate(R.id.action_shopFragment_to_productDetailFragment);

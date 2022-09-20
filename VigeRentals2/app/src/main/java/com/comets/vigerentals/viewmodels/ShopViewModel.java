@@ -17,7 +17,7 @@ public class ShopViewModel extends ViewModel {
     CartRepo cartRepo = new CartRepo();
 
     MutableLiveData<Product> mutableProduct = new MutableLiveData<>();
-
+    //Import data from ShopRepo
     public LiveData<List<Product>> getProducts() {
         return shopRepo.getProducts();
     }
@@ -30,6 +30,7 @@ public class ShopViewModel extends ViewModel {
         return mutableProduct;
     }
 
+    //Import data from CartRepo
     public LiveData<List<CartItem>> getCart() {
         return cartRepo.getCart();
     }
@@ -42,9 +43,7 @@ public class ShopViewModel extends ViewModel {
         cartRepo.removeItemFromCart(cartItem);
     }
 
-    public void changeQuantity(CartItem cartItem, int quantity) {
-        cartRepo.changeQuantity(cartItem, quantity);
-    }
+    public void changeQuantity(CartItem cartItem, int quantity) { cartRepo.changeQuantity(cartItem, quantity); }
 
     public LiveData<Double> getTotalPrice() {
         return cartRepo.getTotalPrice();

@@ -16,13 +16,15 @@ public class Product {
     private double price;
     private boolean isAvailable;
     private String imageUrl;
+    private String description;
 
-    public Product(String id, String name, double price, boolean isAvailable, String imageUrl) {
+    public Product(String id, String name, double price, boolean isAvailable, String imageUrl, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.isAvailable = isAvailable;
         this.imageUrl = imageUrl;
+        this.description = description;
     }
 
     public String getId() {
@@ -65,6 +67,10 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -73,6 +79,7 @@ public class Product {
                 ", price=" + price +
                 ", isAvailable=" + isAvailable +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 
@@ -85,7 +92,8 @@ public class Product {
                 isAvailable() == products.isAvailable() &&
                 getName().equals(products.getName()) &&
                 getId().equals(products.getId()) &&
-                getImageUrl().equals(products.getImageUrl());
+                getImageUrl().equals(products.getImageUrl()) &&
+                getDescription().equals(products.getDescription());
     }
     public static DiffUtil.ItemCallback<Product> itemCallback = new DiffUtil.ItemCallback<Product>() {
         @Override

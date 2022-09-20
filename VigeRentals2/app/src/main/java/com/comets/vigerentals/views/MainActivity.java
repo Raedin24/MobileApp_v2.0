@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController);
         shopViewModel = new ViewModelProvider(this).get(ShopViewModel.class);
+        //Allows us to observe the cart items
         shopViewModel.getCart().observe(this, new Observer<List<CartItem>>() {
             @Override
             public void onChanged(List<CartItem> cartItems) {
